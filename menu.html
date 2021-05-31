@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Adrian's Caterers</title>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> <!-- Needed for JQuery -->
+    <!-- This is for ADOBE TYPEKIT FONTS -->
+    
+    <!-- Local JQuery Files REMOVE BEFORE UPLOADING FILE -->
+    <script src="JQuery-1.11.3.js"></script>
+    <script src="jquery.js"></script>
+    <script src="https://use.typekit.net/bvy3pot.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!-- FOR SEO -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <meta name="copyright" content="2016">
+    <link rel="shortcut icon" href="images/AdriansCaterers_favicon.ico">
+</head>
+<script>
+    alert(getTitle);
+    function openMenu(evt, menuName) {
+        var getwidth = window.innerWidth;   
+        if(getwidth < 1100) {
+        return;
+    }
+      else {  
+    
+            var getActive = document.getElementsByClassName('tabcontentActive');
+
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 1; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("myAccordion");
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" tabcontentActive", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.className += " Active";
+      }
+    
+}
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('#Menu_Icon').click(function() {
+          $('.Phone_Nav_Bar').toggleClass('Toggled-Phone-Nav');
+           $('.ML1').toggleClass('MLOne');
+           $('.ML2').toggleClass('MLTwo');
+           $('.ML3').toggleClass('MLThree');
+       });
+        if($('.Container').css("display", "none")){
+          $('.Container').fadeIn(1000);  
+          $('.Container').css("display", "block")
+        };
+        $('a').click(function() {
+            $('.Container').fadeOut(500);
+            var href = $(this).attr('href');
+            setTimeout(function() {window.location = href}, 500);
+            return false;
+        });
+        window.onhashchange = function() {
+            $('.Container').fadeOut(500);
+                 var href = $(this).attr('href');
+                 setTimeout(function() {window.location = href}, 500);
+        return false;
+        }
+    });
+</script>
+<body onunload="">
+    <div class="Container"> <!-- Start of Main Container  -->
+        <header class="Phone_Nav"><!-- Start of Cell Phone Navigation  -->
+            <div id="Logo_Icon" itemscope itemtype="http://http://www.adrianscaterers.net">
+                <a itemprop="url" href="index.html" title="Adrian's Caterering">
+                    <img src="images/Logo.svg" title="Adrian's Caterers Logo" alt="Adrian's Caterering, Plainfield, New Jersey, Caribbean Restaurant">
+                </a>
+            </div>
+            <div id="Menu_Icon">
+                <!-- <img src=""> In case of Image Icon-->
+                <div class="MenuAbout">
+                    <div class="Menu-Line ML1"></div>
+                    <div class="Menu-Line ML2"></div>
+                    <div class="Menu-Line ML3"></div>
+                </div>
+            </div>
+            <nav class="Phone_Nav_Bar">
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About<div class="Sub-Nav-Text">&mdash; Our Story</div></li></a>
+                    <a href="menu.html"><li>Menu<div class="Sub-Nav-Text">&mdash; The food</div></li></a>
+                    <a href="services.html"><li>Services<div class="Sub-Nav-Text">&mdash; What we offer</div></li></a>
+                    <a href="contact.html"><li>Contact<div class="Sub-Nav-Text">&mdash; Get in Touch</div></li></a>
+                </ul>
+            </nav>
+            <nav class="Desktop_Nav_Bar">
+                
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About<div class="Sub-Nav-Text">&mdash; Our Story</div></li></a>
+                    <a href="menu.html" id="ActiveA"><li class="ActivePage">Menu<div class="Sub-Nav-Text">&mdash; The food</div></li></a>
+                    <a href="services.html"><li>Services<div class="Sub-Nav-Text">&mdash; What we offer</div></li></a>
+                    <a href="contact.html"><li>Contact<div class="Sub-Nav-Text">&mdash; Get in Touch</div></li></a>
+                </ul>
+            </nav>
+        </header> <!-- End of Cell Phone Navigation  -->
+        <div class="Content-Container"> <!-- Start of Content Container  -->
+            <div class="Hero-Element">
+                <div class="Accordion-Container">
+                    <div class="myAccordion">
+                        <div class="Arrow" id="Arrow-Left">&#10147;</div>
+                        <h3 id="MenuTitle"></h3>
+                        <div class="Arrow" id="Arrow-Right">&#10147;<br></div>
+                    </div>
+                    <div class="MA-Desktop">
+                        <div class="myAccordion DMA" id="BreakfastTab">Breakfast</div>
+                        <div class="myAccordion DMA" id="LunchTab">Lunch</div>
+                        <div class="myAccordion DMA" id="ShowerTab">Shower</div>
+                        <div class="myAccordion DMA" id="HorTab">Hor</div>
+                        <div class="myAccordion DMA" id="SouthernTab">Southern</div>
+                        <div class="myAccordion DMA" id="SpecialtyTab">Specialty</div>
+                        <div class="myAccordion DMA" id="DinnerTab">Dinner</div>
+                        <div class="myAccordion DMA" id="HolidayTab">Holiday</div>
+                        <div class="myAccordion DMA" id="BrunchTab">Brunch</div>
+                    </div>
+                    <div class="Menu ActiveContent" id="Breakfast">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                            <div class="LeftMenu">
+                                <ul class="DrinksUL">
+                                    <h3>Drinks</h3>
+                                    <li>Assorted Juices</li>
+                                    <li>Coffee</li>
+                                    <li>Tea</li>
+                                </ul>
+                                <img src="images/Adrian's_Catering_Drinks.jpg">
+                            </div>
+                            <div class="RightMenu">
+                                 <ul class="FoodUL">
+                                    <h3>Dishes</h3>
+                                    <li>Pork or Turkey Sausage</li>
+                                    <li>Bacon or Turkey Bacon</li>
+                                    <li>Fried Tilapia</li>
+                                    <li>Scrambled Eggs</li>
+                                    <li>Grits</li>
+                                    <li>Home Fries</li>
+                                    <li>French Toast</li>
+                                    <li>Assorted Baked Goods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- This is Lunch -->
+                    <div class="Menu" id="Lunch">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                            <div class="LeftMenu">
+                                <ul class="DrinksUL">
+                                        <h3>Drinks</h3>
+                                        <li>Sodas</li>
+                                        <li>Coffee</li>
+                                        <li>Tea</li>
+                                        <li>Fruit Punch</li>
+                                        <li>Lemonade</li>
+                                    </ul>
+                                </div>
+                                <div class="RightMenu">
+                                     <ul class="FoodUL">
+                                        <h3>Entrees</h3>
+                                        <li>Ribs</li>
+                                        <li>Fried Chicken</li>
+                                        <li>Chicken Marsala</li>
+                                        <li>Sausage & Peppers</li>
+                                        <li>Tilapia</li>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Strach</h3>
+                                        <li>Creamy Mashed Potatoes</li>
+                                        <li>Yellow Rice</li>
+                                        <li>Roasted Red Potatoes</li>
+                                        <li>Coleslaw</li>
+                                        <li>Macaroni & Cheese</li>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Vegetables</h3>
+                                        <li>Collard Greens</li>
+                                        <li>Carrots & Beans</li>
+                                        <li>Vegetable Medley</li>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Salads</h3>
+                                        <li>Tossed Salad</li>
+                                        <li>Potato Salad</li>
+                                        <li>Macaroni Salad</li>
+                                        <li>Coleslaw</li>
+                                     </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- This is Shower -->
+                    <div class="Menu" id="Shower">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                            <div class="LeftMenu">
+                                <ul class="DrinksUL">
+                                        <h3>Drinks</h3>
+                                        <li>Sodas</li>
+                                        <li>Coffee</li>
+                                        <li>Tea</li>
+                                        <li>Fruit Punch</li>
+                                        <li>Lemonade</li>
+                                    </ul>
+                                </div>
+                                <div class="RightMenu">
+                                     <ul class="FoodUL">
+                                        <h3>Entrees</h3>
+                                        <li>Chicken Marsala/Francaise, Baked or Fried Chicken</li>
+                                        <li>Fried Tilapia</li>
+                                        <li>Barbeque Ribs (Beef or Pork)</li>
+                                        <li>Old Fashion Beef Stew or Ox Tails</li>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Accompaniments</h3>
+                                        <li>Carrots & Green Beans or Vegetable Medley or Collard Greens</li>
+                                        <li>Yellow Rice or Rice & Peas</li>
+                                        <li>Freshly Baked Rolls & butter</li>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Desserts</h3>
+                                        <li>Home-made Bread Pudding or Fresh Fruit</li>
+                                        <li>Peach Cobbler</li>
+                                        <li>Cheesecake or Carrot Cake</li>
+                                     </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- This is Hor -->
+                    <div class="Menu" id="Hor">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                                <div class="LeftMenu">
+                                
+                                </div>
+                                <div class="RightMenu" width="100%">
+                                     <ul class="FoodUL">
+                                        <h3>Hot Hor d’oeuvres</h3>
+                                        <li>Barbeque Pork Ribs</li>
+                                        <li>Barbeque Beef Ribs</li>
+                                        <li>Chicken Wings</li>
+                                        <li>Jamaican Beef Patties</li>
+                                        <li>Meatballs</li>
+                                        <li>Sausage & Peppers</li>
+                                        <li>Rice or Pasta</li>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Accompaniments</h3>
+                                        <li>Fruit Platter</li>
+                                        <li>Vegetable</li>
+                                        <li>Cold Antipasta</li>
+                                        <li>Potato Salad</li>
+                                     </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- Southern -->
+                    <div class="Menu" id="Southern">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                                <div class="LeftMenu">
+                                    <ul class="DrinksUL">
+                                        <h3>Drinks</h3>
+                                        <li>Hot Chocolate</li>
+                                        <li>Coffee</li>
+                                        <li>Tea</li>
+                                        <li>Fruit Punch</li>
+                                        <li>Lemonade</li>
+                                    </ul>
+                                </div>
+                                <div class="RightMenu">
+                                     <ul class="FoodUL">
+                                        <h3>Salads</h3>
+                                        <li>Fruit Salad</li>
+                                        <li>Tossed Salad with House Dressing</li>
+                                        <li>Carrot Salad</li>
+                                        <li>Macaroni Salad</li>
+                                        <li>Potato Salad</li>
+                                        <li>Cole Slaw</li>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Vegetables & Starches</h3>
+                                        <li>Mashed Potato & Gravy</li>
+                                        <li>White Rice</li>
+                                        <li>Roasted Potatoes</li>
+                                        <li>Macaroni & Cheese</li>
+                                        <li>Candies Yams</li>
+                                        <li>Collard Greens</li>
+                                        <li>String Beans</li>
+                                        <li>Corn</li>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Meats</h3>
+                                        <li>Fried Chicken</li>
+                                        <li>Smothered Pork Chops</li>
+                                        <li>Ox Tails</li>
+                                        <li>BBQ Ribs (Beef & Pork)</li>
+                                        <li>Fried Whiting</li>
+                                        <li>Roasted Ham</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Desserts</h3>
+                                        <li>Jell-O</li>
+                                        <li>Bread Puddings</li>
+                                        <li>Peach & Apple Cobbler</li>
+                                        <li>Carrot Cake</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- This is Special -->
+                    <div class="Menu" id="Specialty">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                                <div class="LeftMenu">
+                                    <ul class="DrinksUL">
+                                        <h3>Drinks</h3>
+                                        <li>Fruit Punch</li>
+                                        <li>Sorrel</li>
+                                    </ul>
+                                </div>
+                                <div class="RightMenu">
+                                     <ul class="FoodUL">
+                                        <h3>Carving Station</h3>
+                                        <li>Roast Beef</li>
+                                         <li>Ham</li>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Caribbean Station</h3>
+                                        <li>BBQ Spare Ribs</li>
+                                         <li>Boneless Curry Chicken</li>
+                                         <li>Cocktail Beef Patties</li>
+                                         <li>Jerk Chicken Wings</li>
+                                         <li>Tilapia with Escoviche Sauce</li>
+                                         <li>Bajan Codfish Cakes</li>
+                                         <li>Rice & Peas</li>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Italian Station</h3>
+                                        <li>Penne Ala Vodka</li>
+                                        <li>Farfalle with Garlic Butter Sauce</li>
+                                        <li>Tortellini Alfredo</li>
+                                        <li>Cheese Ravioli with Marinara Sauce</li>
+                                        <li>Stuffed Shells</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Oriental Station</h3>
+                                        <li>Mini Egg Rolls</li>
+                                        <li>Fried Rice with Chicken or Shrimp</li>
+                                        <li>Tempura Vegetables with Soy-Ginger Sauce</li>
+                                        <li>Sweet & Sour Chicken</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Mexican Station</h3>
+                                        <li>Empanadas</li>
+                                        <li>Soft Tacos with Toppings</li>
+                                        <li>Chicken Quesadillas</li>
+                                        <li>Fajitas (Chicken or Beef)</li>
+                                        <li>Served with Guacamole, Salsa, & Sour Cream</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Vegetable Station</h3>
+                                        <li>Crudité of Fresh Vegetables</li>
+                                        <li>Fried Zucchini</li>
+                                        <li>Grilled Vegetable Salad</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Dessert</h3>
+                                        <li>Assorted Cakes & Pies</li>
+                                        <li>Fresh Fruit Platter</li>
+                                        <li>Mini Italian Pastries</li>
+                                        <li>Chocolate Fondue</li>
+                                        <li>Black Cake</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- This is Dinner -->
+                    <div class="Menu" id="Dinner">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                                <div class="LeftMenu">
+                                    <ul class="DrinksUL">
+                                        <h3>Drinks</h3>
+                                        <li>Coffee</li>
+                                        <li>Tea</li>
+                                        <li>Sodas</li>
+                                        <li>Fruit Punch</li>
+                                        <li>Lemonade</li>
+                                    </ul>
+                                </div>
+                                <div class="RightMenu">
+                                     <ul class="FoodUL">
+                                        <h3>Salads (Choice of One)</h3>
+                                        <li>Crisp Garden Greens with Cucumber, Tomatoes, and Carrots</li>
+                                         <li>Classic Caesar Salad</li>
+                                         <li>Roasted Vegetable Pasta Salad</li>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Entrees (Choice of Three)</h3>
+                                        <li>Chicken Marsala or Chicken Francaise</li>
+                                         <li>Baked or Curry Chicken</li>
+                                         <li>Fried Tilapia or Salmon with Dill Sauce</li>
+                                         <li>Barbeque Ribs (Beef or Pork)</li>
+                                         <li>Penne with Vodka Sauce</li>
+                                         <li>Baked Macaroni & Cheese</li>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Accompaniments</h3>
+                                        <li>Carrots & Green Beans, Vegetable Medley, or Collard Greens</li>
+                                        <li>Yellow Rice or Rice & Peas</li>
+                                        <li>Fresh Baked Rolls with Butter</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Dessert (Choice of One)</h3>
+                                        <li>Cheese Cake or Carrot Cake</li>
+                                        <li>Peach Cobbler</li>
+                                        <li>Homemade Bread Pudding</li>
+                                        <li>Fresh Fruit</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- This is Holiday -->
+                    <div class="Menu" id="Holiday">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                                <div class="LeftMenu">
+                                    <ul class="DrinksUL">
+                                        <h3>Drinks</h3>
+                                        <li>Eggnog</li>
+                                        <li>Tea</li>
+                                        <li>Coffee</li>
+                                        <li>Fruit Punch</li>
+                                    </ul>
+                                    <img src="images/Mimosas.png">
+                                </div>
+                                <div class="RightMenu">
+                                     <ul class="FoodUL">
+                                        <h3>Menu</h3>
+                                         <li>Bread & Butter</li>
+                                         <li>Fruit (Seasonal)</li>
+                                         <li>Potato or Pasta Salad</li>
+                                         <li>Rice & Peas</li>
+                                         <li>Candied Yams</li>
+                                         <l>Garden Salad with House Dressing</l>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Choice of Meats (Select Two or Three)</h3>
+                                        <li>Seafood</li>
+                                         <li>Chicken</li>
+                                         <li>Ribs</li>
+                                         <li>Roast Beef</li>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Choice of Vegetables</h3>
+                                        <li>Carrots & Beans</li>
+                                        <li>Mixed Vegetables</li>
+                                        <li>Collard Greens</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Dessert (Seasonal)</h3>
+                                        <li>Carrot Cake</li>
+                                        <li>Peach Cobbler</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- This is Brunch -->
+                    <div class="Menu" id="Brunch">
+                        <div class="MenuImage"></div>
+                        <div class="MenuContent">
+                                <div class="LeftMenu">
+                                    <ul class="DrinksUL">
+                                        <h3>Drinks</h3>
+                                        <li>Sorrel</li>
+                                        <li>Fruit Punch</li>
+                                    </ul>
+                                </div>
+                                <div class="RightMenu">
+                                     <ul class="FoodUL">
+                                        <h3>Cold Salad</h3>
+                                         <li>Fruit Salad</li>
+                                         <li>Potato Salad</li>
+                                         <li>Cucumber Salad</li>
+                                         <li>Pasta Salad</li>
+                                    </ul>
+                                     
+                                     <ul class="FoodUL">
+                                        <h3>Starch</h3>
+                                        <li>Rice & Peas</li>
+                                         <li>Yellow Rice</li>
+                                         <li>Seasoned Rice</li>
+                                         <li>White Rice</li>
+                                         <li>Yams</li>
+                                         <li>Plantains</li>
+                                         <li>Roasted Potatoes</li>
+                                         <li>Mashed Potatoes</li>
+                                         <li>Macaroni & Cheese</li>
+                                         <li>Pastas (Cajun, Ala Vodka, Alfredo)</li>
+                                         
+                                         <p>*With seafood or vegetables</p>
+                                     </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Vegetables</h3>
+                                        <li>Callaloo & Codfish</li>
+                                        <li>Mixed(String Beans, Carrots, Broccoli)</li>
+                                        <li>Collard Greens</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Meat/Fish</h3>
+                                        <li>Oxtails</li>
+                                        <li>BBQ Chicken</li>
+                                        <li>Fried Chicken</li>
+                                        <li>Baked Chicken</li>
+                                        <li>Stewed Chicken</li>
+                                        <li>Curry Chicken</li>
+                                        <li>Jerk Chicken</li>
+                                        <li>Chicken Marsala</li>
+                                        <li>Roast Beef</li>
+                                        <li>Beef Stew</li>
+                                        <li>Beef Brisket</li>
+                                        <li>BBQ Beef Ribs</li>
+                                        <li>BBQ Pork Rib s</li>
+                                        <li>Jerk Pork</li>
+                                        <li>Pork Chops</li>
+                                        <li>Escovitch Fish</li>
+                                        <li>Fish Francaise</li>
+                                        <li>Salmon</li>
+                                        <li>Flying Fish (from Barbados)</li>
+                                    </ul>
+                                    
+                                    <ul class="FoodUL">
+                                        <h3>Desserts</h3>
+                                        <li>Carrot Cake</li>
+                                        <li>Peach Cobbler</li>
+                                        <li>Cheesecake</li>
+                                        <li>Assorted Puddings & Breads</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var menuArray = ["Breakfast", "Lunch", "Shower", "Hor", "Southern", "Specialty", "Dinner", "Holiday", "Brunch"];
+                    var menuContent = document.getElementsByClassName('Menu');
+                    var desktopTabs = document.getElementsByClassName('DMA');
+                    var menuContentId = [];
+                    var desktopTabsID = [];
+                    var getTitle = document.getElementById('MenuTitle');
+                    var i = 0;
+                    getTitle.innerHTML = menuArray[i];
+                    $('#Arrow-Right').click(function() {
+                        i+=1;
+                        getTitle.innerHTML = menuArray[i];
+                        if(i == 9){
+                            i=0;
+                            getTitle.innerHTML = menuArray[i];
+                            changeImage();
+                        }
+                        displayMenu();
+                        changeImage();
+                    });
+                    $('#Arrow-Left').click(function() {
+                        if(i == 0){
+                            i=9;
+                            getTitle.innerHTML = menuArray[i];
+                            displayMenu();
+                            changeImage();
+                        }
+                        i-=1;
+                        getTitle.innerHTML = menuArray[i];
+                        displayMenu();
+                        changeImage();
+                    });
+                    for(o = 0; o < 10; o++){
+                        var getID = menuContent[o].id;
+                        menuContentId.push(getID);
+                    }
+                    function displayMenu() {
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#' + menuContentId[i]).addClass('ActiveContent');
+                        $('.ActiveContent').fadeIn(500);
+                    };
+                    
+                    function changeImage() {
+ 
+                    if(i == 0){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Breakfast').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Breakfast.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }   
+                    if(i == 1){
+                        $('.MenuImage').css('background', 'url(images/Lunch_Menu.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }
+                    if(i == 2){
+                        $('.MenuImage').css('background', 'url(images/Shower.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }
+                    if(i == 3){
+                        $('.MenuImage').css('background', 'url(images/Hor.jpg)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }
+                    if(i == 4){
+                        $('.MenuImage').css('background', 'url(images/Southern.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }
+                    if(i == 5){
+                        $('.MenuImage').css('background', 'url(images/Specialty.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                        
+                    }
+                    if(i == 6){
+                        $('.MenuImage').css('background', 'url(images/Dinner_Menu.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }
+                    if(i == 7){
+                        $('.MenuImage').css('background', 'url(images/Mother_Menu.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                        
+                    }
+                    if(i == 8){
+                        $('.MenuImage').css('background', 'url(images/Brunch_Menu.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                        
+                    }
+                    };
+                </script>
+            </div>
+            <script type="text/javascript">
+                $('.DMA').click(function(){
+                    var dmaID = $(this).attr('id');
+                    $('.ActiveTab').removeClass('ActiveTab');
+                    $(this).addClass('ActiveTab');
+                    $('.MenuImage').css('background', 'url(images/Breakfast.png)');
+                    
+                    if(dmaID == "BreakfastTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Breakfast').addClass('ActiveContent');
+                    }   
+                    if(dmaID == "LunchTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Lunch').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Lunch_Menu.png)');
+                    }
+                    if(dmaID == "ShowerTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Shower').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Shower.png)');
+                    }
+                    if(dmaID == "HorTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Hor').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Hor.jpg)');
+                    }
+                    if(dmaID == "SouthernTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Southern').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Southern.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }
+                    if(dmaID == "SpecialtyTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Specialty').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Specialty.png)');
+                        
+                    }
+                    if(dmaID == "DinnerTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Dinner').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Dinner_Menu.png)');
+                        $('.MenuImage').css('background-size', 'cover');
+                    }
+                    if(dmaID == "HolidayTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Holiday').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Mother_Menu.png)');
+                        
+                    }
+                    if(dmaID == "BrunchTab"){
+                        $('.ActiveContent').removeClass('ActiveContent');
+                        $('#Brunch').addClass('ActiveContent');
+                        $('.MenuImage').css('background', 'url(images/Brunch_Menu.png)');
+                        
+                    }
+                 });
+            </script>
+        </div> <!-- End of Content Container  -->
+        <footer>
+            <div class="Partnership-Container">
+                <p class="P-Title">Partnerships</p>
+                <div class="Partnerships">
+                    <div class="P-Image">
+                        <img src="images/vfw%20logo.jpg" width="100%">
+                    </div>
+                    
+                    <div class="P-Text">VFW Post 3117 <br> Adrian's Caterers are proud partners with Veterans of Foreign Wars. Serving those who served our us in a way we could never pay back. <a href="http://www.njvfw.org/index.php/122-districts/district-8/693-vfw-post-3117">Learn more</a> on their website.</div>
+                </div>
+                
+                <div class="Partnerships">
+                    <div class="P-Image"> 
+                        <img src="images/Fountain%20Baptist%20Church%20logo.png" width="100%">
+                    </div>
+                    
+                    <div class="P-Text"> Fountain Baptist Church <br> We've partnered with a number of local churches. FBC is one of main partners, find out more by clicking <a href="http://fountainbaptist.org/">here</a></div>
+                </div>
+                
+                <div class="Partnerships">
+                    <div class="P-Image"> 
+                        <img src="images/City%20of%20Plainfield%20logo.png" width="100%">
+                    </div>
+                    
+                    <div class="P-Text"> City of Plainfield:<br> Adrian's Caterers has worked with the city of Plainfield numerous times and are a proud partner with this great city. <a href="http://www.plainfieldnj.gov/
+">View</a> their website </div>
+                </div>
+            </div>
+            <div class="Contact">
+                <p class="P-Title">Contact</p>
+                <p class="C-Text">
+                    <span style="color:white;"><strong>T:</strong> 908.372.4922</span><br><br>
+                    <strong>Email:</strong> Adrianscaterers@gmail.com<br><br>
+                    1100-08 East 2nd St, Plainfield, NJ 07062<br>
+                </p>
+            </div>
+            <div class="Social">
+                <p class="P-Title">Social Media</p>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <a href="https://www.facebook.com/AdriansCaterers" target="_blank"><img src="images/icons/facebook_icon.png" width="100%"></a>
+                    </div>
+                </div>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <a href="https://www.instagram.com/adrianscaterers/" target="_blank"><img src="images/icons/insta_icon.png" width="100%"></a>
+                    </div>
+                </div>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <a href="https://www.linkedin.com/in/AdriansCaterers" target="_blank"><img src="images/icons/linkedin_icon.png" width="100%"></a>
+                    </div>
+                </div>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <img src="images/icons/google_icon.png" width="100%" title="Coming Soon!">
+                    </div>
+                </div>
+            </div>
+            <div class="Important">
+                <p class="P-Title">Important Information</p>
+                <div class="info">
+                    <i>Information coming soon</i>
+                </div>
+                <div class="small">&copy; Copyright 2016</div>
+            </div>
+        </footer>
+    </div> <!-- End of Main Container  -->
+</body>
+</html>

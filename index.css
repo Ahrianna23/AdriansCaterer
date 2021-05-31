@@ -1,0 +1,1322 @@
+@font-face { font-family: ZonaPro-Light; src: url('ZonaPro-Light.otf'); } 
+@font-face { font-family: ZonaPro-Light; font-weight: bold; src: url('ZonaPro-Light.otf');}
+@media only screen
+and (min-width:300px) {
+    Body {
+        margin: 0;
+        padding: 0;
+    } 
+    .Container {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+    }  
+    Header {
+        width: 100%;
+        height: 80px;
+        background: rgba(0,0,0,0.5);
+        border-bottom: 2px white solid;
+        position: fixed;
+        z-index: +999;
+    }
+    #Logo_Icon {
+        width: 25%;
+        height: 100%;
+        background: #414042;
+        float: left;
+    }
+    #Logo_Icon img {
+        width: 100%;
+        height: 100%;
+    }
+    #Menu_Icon {
+        width: 25%;
+        height: 100%;
+        background: rgba(255,255,255,1);
+        float: right;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        position: relative;
+        cursor: pointer;
+        transition: all linear 300ms;
+    }
+    .Menu {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+    }
+     
+        
+        /* The sub class for the menu line begins here 
+        .Menu-Line {
+            width: 100%;
+            height: 2px;
+            background: #000000;
+            margin-top: 15px;
+            transition: all linear 300ms;
+        }
+        .Menu-Line:first-child{
+            margin-top: 10%;
+        } */
+        .ML1 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 10px;
+            transition: all ease 400ms;
+        }
+        .ML2 {
+            height: .10em;
+            width: 100%;
+            background: black;
+           margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .ML3 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .MLOne{
+            -webkit-transform-origin: top left;
+            -moz-transform-origin: top left;
+            -ms-transform-origin: top left;
+            -o-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 70px;
+            margin: 0 auto;
+            height: .10em;
+            margin-left: 10%;
+            margin-top: 8%;
+        }
+        .MLTwo {
+            display: none;
+        }
+        .MLThree{
+            -webkit-transform-origin: bottom left;
+            -moz-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+            transform: rotate(-45Deg);
+            -webkit-transform: rotate(-45Deg);
+            -moz-transform: rotate(-45Deg);
+            -ms-transform: rotate(-45Deg);
+            transform: rotate(-45Deg);
+            width: 70px;
+            transition: all ease 400ms;
+            margin: 0 auto;
+            margin-top:47px;
+            margin-left: 10%;
+            height: .10em;
+        }
+        /* End of that styling */
+.Phone_Nav_Bar {
+    width: 75%;
+    height: auto;
+    overflow: auto;
+    background: #F69240;
+    position: absolute;
+    border-left: 5px #4c4c4c solid;
+    right: -90%;
+    top: 82px;
+    transition: all linear 300ms;
+}
+.Toggled-Phone-Nav {
+    right: 0%;
+    z-index: +999;
+}
+.Phone_Nav_Bar ul {
+    padding: 0;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 5px white solid;
+    cursor: pointer;
+}
+.Phone_Nav_Bar ul li:hover {
+    background: #4c4c4c;
+}
+.Phone_Nav_Bar ul a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: sans-serif; 
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+.Sub-Nav-Text {
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    color: #4c4c4c;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: .7;
+    transition: all linear 400ms;
+}
+.Phone_Nav_Bar ul li:hover .Sub-Nav-Text {
+    opacity: 1;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px; margin-left: -10px;
+}
+/* Content Container + Children Element Styling Here */
+.Desktop_Nav_Bar {
+        display: none;
+    }
+.Content-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.Hero-Element {
+    width: 100%;
+    height: 34vh;
+    background-image: url(images/Adrians_Home_Page_Mobile.png);
+    background-size: cover;
+    float: left;
+    margin-bottom: 8px;
+    margin-top: 80px;
+}
+.Quote-Container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    float: left;
+    background: #F69240;
+    margin-bottom: 8px;
+}
+.Quote {
+    text-align: center;
+    font-size: 20px;
+    opacity: .5;
+    font-family: cursive
+}
+.Circle-Element {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -70px;
+    background: #ffffff;
+    background-image: url(images/Icon.svg);
+    background-position: 0px 10px;
+}
+.Index-Content {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: white;
+}
+.Index-Displays {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-bottom: 10px;
+    overflow: auto;
+    box-sizing: border-box;
+    overflow: auto;
+}
+    .Index-Displays iframe {
+        width: 100%;
+        margin-left:0%;
+    }
+    .Index-Displays:nth-child(3) {
+        width: 85%;
+        margin-left: 7.5%;
+        padding: 0px;
+    }
+.ID-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.ID-Image {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 0px;
+    background: #6D6E71;
+    overflow: hidden;
+}
+    .ID-Image img {
+        width: 100%;
+    }
+.ID-Text {
+    width: 100%;
+    height: auto;
+    background: #FFF;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 150%;
+}
+     .CTA {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    float: left;
+}
+.Button {
+    width: 80%;
+    height: auto;
+    box-sizing:border-box;
+    padding: 10px 15px;
+    text-align: center;
+    margin: 0 auto;
+    background: #F69240;
+    font-family: sans-serif;
+    border: 1px white solid;
+    cursor: pointer;
+    color: white;
+    font-family: ZonaPro-Light;
+    transition: all linear 300ms;
+}
+/* End of Content Container + Children Element Styling */
+
+/* Start of Footer Styling */
+Footer {
+    width: 100%;
+    height: auto;
+    background: #414042;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 8px;
+}
+.Partnership-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.Partnerships {
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.P-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.P-Image {
+    width: 30%;
+    height: auto;
+    background: #58595B;
+    float: left;
+    border: 1px white solid;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.P-Text {
+    width: 70%;
+    height: auto;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.P-Text a{
+        color: #F69240;
+    }
+.Contact {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    border-top: 1px white solid;
+}
+.C-Text {
+    width: 100%;
+    height: auto;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.Social {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    border-top: 1px white solid;
+}
+.SI-Container {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 30px;
+    float: left;
+}
+.Social-Icon {
+    width: 60px;
+    height: 60px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 0px white solid;
+    margin: 0 auto;
+    color: #ffffff;
+}
+/* For Chrome 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .Social-Icon {
+    width: 100px;
+    height: 100px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 1px white solid;
+    float: left;
+    color: #ffffff;
+    margin-left: 12vw;
+    margin-top: 30px; 
+}
+    */
+
+.Important {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-top: 30px;
+    border-top: 1px white solid;
+}
+    .small {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    .info {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+/* End of Footer Styling */
+}
+@media only screen
+and (min-width:600px) {
+    Body {
+        margin: 0;
+        padding: 0;
+    } 
+    .Container {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+    }  
+    Header {
+        width: 100%;
+        height: 80px;
+        background: rgba(0,0,0,0.5);
+        border-bottom: 2px white solid;
+        position: fixed;
+        z-index: +999;
+    }
+    #Logo_Icon {
+        width: 25%;
+        height: 100%;
+        background: #414042;
+        float: left;
+    }
+    #Logo_Icon img {
+        width: 100%;
+        height: 100%;
+    }
+    #Menu_Icon {
+        width: 25%;
+        height: 100%;
+        background: rgba(255,255,255,1);
+        float: right;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        position: relative;
+        cursor: pointer;
+        transition: all linear 300ms;
+    }
+    .Menu {
+        width: 40%;
+        margin: 0 auto;
+        position: relative;
+    }
+     
+        
+        /* The sub class for the menu line begins here 
+        .Menu-Line {
+            width: 100%;
+            height: 2px;
+            background: #000000;
+            margin-top: 15px;
+            transition: all linear 300ms;
+        }
+        .Menu-Line:first-child{
+            margin-top: 10%;
+        } */
+        .ML1 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 10px;
+            transition: all ease 400ms;
+        }
+        .ML2 {
+            height: .10em;
+            width: 100%;
+            background: black;
+           margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .ML3 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .MLOne{
+            -webkit-transform-origin: top left;
+            -moz-transform-origin: top left;
+            -ms-transform-origin: top left;
+            -o-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 70px;
+            margin: 0 auto;
+            height: .10em;
+            margin-left: 10%;
+            margin-top: 8%;
+        }
+        .MLTwo {
+            display: none;
+        }
+        .MLThree{
+            -webkit-transform-origin: bottom left;
+            -moz-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+            transform: rotate(-45Deg);
+            -webkit-transform: rotate(-45Deg);
+            -moz-transform: rotate(-45Deg);
+            -ms-transform: rotate(-45Deg);
+            transform: rotate(-45Deg);
+            width: 70px;
+            transition: all ease 400ms;
+            margin: 0 auto;
+            margin-top:47px;
+            margin-left: 10%;
+            height: .10em;
+        }
+        /* End of that styling */
+.Phone_Nav_Bar {
+    width: 75%;
+    height: auto;
+    overflow: auto;
+    background: #F69240;
+    position: absolute;
+    border-left: 5px #4c4c4c solid;
+    right: -90%;
+    top: 82px;
+    transition: all linear 300ms;
+}
+.Toggled-Phone-Nav {
+    right: 0%;
+    z-index: +999;
+}
+.Phone_Nav_Bar ul {
+    padding: 0;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 5px white solid;
+    cursor: pointer;
+}
+.Phone_Nav_Bar ul li:hover {
+    background: #4c4c4c;
+}
+.Phone_Nav_Bar ul a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: sans-serif; 
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+.Sub-Nav-Text {
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    color: #4c4c4c;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: .7;
+    transition: all linear 400ms;
+}
+.Phone_Nav_Bar ul li:hover .Sub-Nav-Text {
+    opacity: 1;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px; margin-left: -10px;
+}
+/* Content Container + Children Element Styling Here */
+.Desktop_Nav_Bar {
+        display: none;
+    }
+/* Content Container + Children Element Styling Here */
+
+.Content-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.Hero-Element {
+    width: 100%;
+    height: 450px;
+    background-image: url(images/Adrian_Tablet_Hero.png);
+    background-size: cover;
+    float: left;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+.Quote-Container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    float: left;
+    background: #F69240;
+    margin-bottom: 8px;
+}
+.Quote {
+    text-align: center;
+    font-size: 20px;
+    opacity: .5;
+    font-family: cursive;
+}
+.Circle-Element {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -70px;
+    background: #ffffff;
+    background-image: url(images/Icon.svg);
+    background-position: 0px 10px;
+}
+.Index-Content {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: #fff;
+    box-sizing: border-box; 
+    padding: 0px 12px 15px 12px;
+}
+.Index-Displays {
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 0%;
+    border-left: 5px white solid;
+    box-sizing: border-box;
+}
+.Index-Displays:nth-child(3){
+    margin: 0 auto;
+    float: none;
+    max-width: 500px;
+    width: 100%;
+}
+    .Index-Displays:last-child iframe{
+        width: 100%; margin-left: 0%;
+    }
+.ID-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.ID-Image {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 0px;
+    background: #6D6E71;
+    overflow: hidden;
+}
+    .ID-Image img {
+        width: 100%;
+        height: auto;
+    }
+.ID-Text {
+    width: 100%;
+    height: 300px;
+    background: none;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 300;
+    text-align: left;
+    line-height: 140%;
+}
+.CTA {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    float: left;
+}
+.Button {
+    width: 60%;
+    height: auto;
+    box-sizing:border-box;
+    padding: 10px 15px;
+    text-align: center;
+    margin: 0 auto;
+    background: #F69240;
+    font-family: sans-serif;
+    border: 1px white solid;
+    cursor: pointer;
+    color: white;
+    font-family: ZonaPro-Light;
+    transition: all linear 300ms;
+}
+
+/* End of Content Container + Children Element Styling */
+
+/* Start of Footer Styling */
+Footer {
+    width: 100%;
+    height: auto;
+    background: #414042;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 8px;
+}
+.Partnership-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    padding-bottom: 20px;
+    
+}
+.Partnerships {
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+.P-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.P-Image {
+    width: 150px;
+    height: 150px;
+    background: #58595B;
+    float: left;
+    border: 1px white solid;
+    box-sizing: border-box;
+}
+.P-Text {
+    width: 70%;
+    height: 100px;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+    .P-Text a{
+        color: #F69240;
+    }
+.Contact {
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    box-sizing: border-box;
+    float: left;
+    border-top: 1px white solid;
+}
+.C-Text {
+    width: 100%;
+    height: auto;;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.Social {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    float: left;
+    overflow: auto;
+    border-top: 1px white solid;
+    padding-bottom: 20px;
+    border-left: 1px white solid;
+}
+.SI-Container {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 50px 20%;
+    float: left;
+}
+.Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 0px white solid;
+    float: left;
+    color: #ffffff; 
+}
+/* For Chrome 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 1px white solid;
+    float: left;
+    color: #ffffff;
+    margin-left: 27%;
+    margin-top: 30px; 
+}
+}
+    */
+
+.Important {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-top: 30px;
+    border-top: 1px white solid;
+}
+/* End of Footer Styling */
+ .small {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    .info {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+}
+@media only screen
+and (min-width:1100px) { 
+    Body {
+        margin: 0;
+        padding: 0;
+    } 
+    .Container {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+        position: relative;
+    }  
+    Header {
+        width: 100%;
+        height: 50px;
+        background: rgba(0,0,0,0.5);
+        border-bottom: 1px white solid;
+        position: fixed;
+        max-width: 1500px;
+        z-index: +999;
+    }
+    ActivePage {
+        background: rgba(255,255,255,0.7);
+        color: black;
+    }
+    #Logo_Icon {
+        width: 10%;
+        height: 100%;
+        background: rgba(0,0,0,0.1);
+        float: left;
+    }
+    #Logo_Icon img {
+        width: 100%;
+        height: 100%;
+    }
+    #Menu_Icon {
+        width: 25%;
+        height: 100%;
+        background: #E6E7E8;
+        float: right;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        position: relative;
+        cursor: pointer;
+        transition: all linear 300ms;
+        display: none;
+    }
+    #Menu_Icon:Hover {
+        background: rgba(0,0,0,0.4);
+    }
+        
+.Phone_Nav_Bar {
+    width: 75%;
+    height: 100px;
+    background: #000;
+    position: relative;
+    float: left;
+    display: none;
+    border-left: 5px #4c4c4c solid;
+    transition: all linear 300ms;
+}
+.Toggled-Phone-Nav {
+    right: 0%;
+    z-index: +999;
+}
+.Phone_Nav_Bar ul {
+    padding: 0;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 5px white solid;
+    cursor: pointer;
+}
+.Phone_Nav_Bar ul li:hover {
+    background: #4c4c4c;
+}
+.Phone_Nav_Bar ul li a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: sans-serif; 
+    color: #4c4c4c;
+    font-size: 22px;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+.Sub-Nav-Text {
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    color: #4c4c4c;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: .7;
+    display: none;
+    transition: all linear 400ms;
+}
+.Phone_Nav_Bar ul li:hover .Sub-Nav-Text {
+    opacity: 1;
+    color: rgba(255,255,255,0.9);
+    font-size: 18px; margin-left: -10px;
+}
+.Desktop_Nav_Bar {
+    width: 50%;
+    height: 100%;
+    background:;
+    position: relative;
+    float: right;
+    display: block;
+}
+.Desktop_Nav_Bar ul {
+    height: auto;
+    overflow: auto;
+    padding: 0;
+    margin-top: 0px;
+}
+.Desktop_Nav_Bar ul li {
+    list-style: none;
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    padding: 12px 10px;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all linear 200ms;
+}
+.Desktop_Nav_Bar ul li:hover {
+    background: rgba(76, 76, 76,0.8);
+}
+
+.Desktop_Nav_Bar ul a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: ZonaPro-Light;  
+    color: #E5E5E5;
+    font-size: 22px;
+    margin: 0;
+}
+#ActivePage {
+        background: rgba(255,255,255,0.0);
+        color: #FDCF93;
+    }
+    #ActiveA {
+        color: #FDCF93;
+    }
+.Desktop_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+    
+/* Content Container + Children Element Styling Here */
+
+.Content-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.Hero-Element {
+    width: 100%;
+    height: 85vh;
+    background-image:url(images/Adrians_Home_Page2.png);
+    background-size: cover;
+    background-position:0px 0px;
+    float: left;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+    .Hero-Element img {
+        width: 100%;
+    }
+.Quote-Container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    float: left;
+    background: #F69240;
+    margin-bottom: 6px;
+}
+.Quote {
+    text-align: center;
+    font-size: 20px;
+    opacity: .5;
+    font-family: cursive;
+    color: white;
+}
+.Circle-Element {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -70px;
+    background: #ffffff;
+    background-image: url(images/Icon.svg);
+    background-position: 0px 10px;
+}
+.Index-Content {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: #fff;
+    box-sizing: border-box; 
+    padding: 50px 12px 70px 12px;
+}
+.Index-Displays {
+    width: 33%;
+    height: auto;
+    overflow: auto;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 0%;
+    box-sizing: border-box;
+    border-left: 8px white solid;
+    padding: 0;
+}
+.Index-Displays:nth-child(3){
+    margin-left: 0%;
+    float: left;
+    width: 33%;
+    }
+.Index-Displays:last-child iframe{
+        width: 100%; margin-left: 0%;
+    }
+.ID-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: #4c4c4c;
+    font-weight: bold;
+}
+.ID-Image {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 0px;
+    background: #6D6E71;
+    border: #8570B2 solid 1px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+    .ID-Image img {
+        width: 100%;
+    }
+.ID-Text {
+    width: 100%;
+    height: auto;
+    background: none;;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 150%;
+    color: #4c4c4c;
+    font-size: 18px;
+}
+.CTA {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    float: left;
+}
+.Button {
+    width: 40%;
+    height: auto;
+    box-sizing:border-box;
+    padding: 15px 15px;
+    text-align: center;
+    margin: 0 auto;
+    background: #F69240;
+    font-family: sans-serif;
+    border: 1px white solid;
+    cursor: pointer;
+    color: white;
+    font-family: ZonaPro-Light;
+    transition: all linear 300ms;
+}
+    .Button:hover {
+        background: #D88038;
+    }
+/* End of Content Container + Children Element Styling */
+
+/* Start of Footer Styling */
+Footer {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background: #414042;
+    box-sizing: border-box;
+    border-top: 5px white solid;
+    padding: 15px;
+    margin-top: 8px;
+}
+.Partnership-Container {
+    width: 38%;
+    height: auto;
+    overflow: auto;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-left: 1px white solid;
+    float: right;
+    
+}
+.Partnerships {
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+.P-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: ZonaPro-Light;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.P-Image {
+    width: 100px;
+    height: 100px;
+    background: #58595B;
+    float: left;
+    border: 1px white solid;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.P-Text {
+    width: 70%;
+    height: auto;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+    .P-Text a{
+        color: #F69240;
+    }
+.Contact {
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    box-sizing: border-box;
+    float: left;
+    border-top: none;
+}
+.C-Text {
+    width: 100%;
+    height: auto;;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.Social {
+    width: 30%;
+    height: auto;
+    box-sizing: border-box;
+    float: left;
+    overflow: auto;
+    border-top: none;
+    padding-bottom: 20px;
+    border-left: 1px white solid;
+}
+.SI-Container {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px 20%;
+    float: left;
+}
+.Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 0px white solid;
+    float: left;
+    color: #ffffff; 
+}
+/* For Chrome 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 1px white solid;
+    float: left;
+    color: #ffffff;
+    margin-left: 27%;
+    margin-top: 30px; 
+}
+}
+    */
+
+.Important {
+    width: 60%;
+    height: auto;
+    overflow: auto;
+    margin-top: 30px;
+    border-top: 1px white solid;
+}
+    .small {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 120px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    .info {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 60px; 
+        font-family: ZonaPro-Light;
+        font-size: 18px;
+        font-weight: 100;
+    }
+    
+/* End of Footer Styling */
+}

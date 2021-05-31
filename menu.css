@@ -1,0 +1,1429 @@
+@font-face { font-family: ZonaPro-Light; src: url('ZonaPro-Light.otf'); } 
+@font-face { font-family: ZonaPro-Light; font-weight: bold; src: url('ZonaPro-Light.otf');}
+@media only screen
+and (min-width:300px) {
+    Body {
+        margin: 0;
+        padding: 0;
+    } 
+    .Container {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+    }  
+    Header {
+        width: 100%;
+        height: 80px;
+        background: rgba(0,0,0,0.5);
+        border-bottom: 2px white solid;
+        position: fixed;
+        z-index: +999;
+    }
+    #Logo_Icon {
+        width: 25%;
+        height: 100%;
+        background: #414042;
+        float: left;
+    }
+    #Logo_Icon img {
+        width: 100%;
+        height: 100%;
+    }
+    #Menu_Icon {
+        width: 25%;
+        height: 100%;
+        background: rgba(255,255,255,1);
+        float: right;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        position: relative;
+        cursor: pointer;
+        transition: all linear 300ms;
+    }
+    .MenuAbout {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+    }
+     
+        
+        /* The sub class for the menu line begins here 
+        .Menu-Line {
+            width: 100%;
+            height: 2px;
+            background: #000000;
+            margin-top: 15px;
+            transition: all linear 300ms;
+        }
+        .Menu-Line:first-child{
+            margin-top: 10%;
+        } */
+        .ML1 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 10px;
+            transition: all ease 400ms;
+        }
+        .ML2 {
+            height: .10em;
+            width: 100%;
+            background: black;
+           margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .ML3 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .MLOne{
+            -webkit-transform-origin: top left;
+            -moz-transform-origin: top left;
+            -ms-transform-origin: top left;
+            -o-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 70px;
+            margin: 0 auto;
+            height: .10em;
+            margin-left: 10%;
+            margin-top: 8%;
+        }
+        .MLTwo {
+            display: none;
+        }
+        .MLThree{
+            -webkit-transform-origin: bottom left;
+            -moz-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+            transform: rotate(-45Deg);
+            -webkit-transform: rotate(-45Deg);
+            -moz-transform: rotate(-45Deg);
+            -ms-transform: rotate(-45Deg);
+            transform: rotate(-45Deg);
+            width: 70px;
+            transition: all ease 400ms;
+            margin: 0 auto;
+            margin-top:47px;
+            margin-left: 10%;
+            height: .10em;
+        }
+        /* End of that styling */
+.Phone_Nav_Bar {
+    width: 75%;
+    height: auto;
+    overflow: auto;
+    background: #F69240;
+    position: absolute;
+    border-left: 5px #4c4c4c solid;
+    right: -90%;
+    top: 82px;
+    transition: all linear 300ms;
+}
+.Toggled-Phone-Nav {
+    right: 0%;
+    z-index: +999;
+}
+.Phone_Nav_Bar ul {
+    padding: 0;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 5px white solid;
+    cursor: pointer;
+}
+.Phone_Nav_Bar ul li:hover {
+    background: #4c4c4c;
+}
+.Phone_Nav_Bar ul a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: sans-serif; 
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+.Sub-Nav-Text {
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    color: #4c4c4c;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: .7;
+    transition: all linear 400ms;
+}
+.Phone_Nav_Bar ul li:hover .Sub-Nav-Text {
+    opacity: 1;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px; margin-left: -10px;
+}
+/* Content Container + Children Element Styling Here */
+.Desktop_Nav_Bar {
+        display: none;
+    }
+.Content-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-top: 90px;
+}
+.Hero-Element {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background:#4c4c4c;
+    background-size: cover;
+    background-position: 0px;
+    float: left;
+    margin-bottom: 8px;
+    transition: all linear 300ms;
+    position: relative;
+}
+    .Accordion-Container {
+        width: 100%;
+        min-height: 400px;
+        height: auto;
+        overflow: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .myAccordion {
+        width: 100%;
+        height: auto;
+        float: left;
+        background: #FCFAFA;
+        font-family: "ZonaPro-Light";
+        transition: all linear 300ms;
+        box-sizing: border-box;
+        padding: 0px;
+        text-align: center;
+        margin: 0;
+        font-size: 1.2em;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .myAccordion h3 {
+        width: 50%;
+        float: left;
+    }
+    .DMA {
+        display: none;
+    }
+    .Arrow {
+        width: 25%;
+        height: auto;
+        overflow: auto;
+        font-size: 28px;
+        float: left;
+        padding-left: 10px;
+        box-sizing: border-box;
+        padding: 20px;
+        color:black;
+        cursor: pointer;
+    }
+    .Arrow:first-child{
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+        text-align: right;
+        padding-right: 10px;
+    }
+    .Arrow:last-child{
+        float: right;
+        text-align: right;
+        padding-right: 10px;
+        padding-left: 0;
+    }
+    .Menu {
+        float: left;
+        height: auto;
+        overflow: auto;
+        display: none;
+        width: 100%;
+    }
+    .MenuImage {
+        float: left;
+        width: 100%;
+        height: 150px;
+        background-image: url(images/Breakfast.png);
+        background-size: cover;
+    }
+    .LeftMenu {
+        float: left;
+        width: 100%;
+        background: rgba(255,255,255,1);
+        font-family: "ZonaPro-Light";
+        font-weight: 300;
+        box-sizing: border-box;
+        border-right: 10px #F69240 solid;
+        border-bottom: 10px #F69240 solid;
+        border-top: 10px #000 solid;
+        font-size: 18px;
+        text-align: center;
+    }
+    .LeftMenu img {
+        width: 100%;
+    }
+    .LeftMenu ul , .RightMenu ul {
+        padding: 10px 20px;
+    }
+    .LeftMenu ul li, .RightMenu ul li {
+        list-style: none;
+        margin-top: 10px;
+    }
+    .LeftMenu ul h3, .RightMenu ul h3 {
+        border-bottom: 1px black solid;
+        padding-bottom: 10px;
+    }
+    .RightMenu {
+        float: left;
+        width: 100%;
+        background: rgba(255,255,255,1);
+        font-family: "ZonaPro-Light";
+        background-repeat: repeat-y;
+        font-family: sans-serif;
+        font-weight: 300;
+        text-align: center;
+        min-height: 650px;
+        height:auto;
+        box-sizing: border-box;
+        border-right: 10px #F69240 solid;
+        border-left: 10px #F69240 solid;
+        border-top: 10px #000 solid;
+        font-size: 18px;
+    }
+    .ActiveContent {
+        display: block;
+    }
+/* End of Content Container + Children Element Styling */
+
+/* Start of Footer Styling */
+Footer {
+    width: 100%;
+    height: auto;
+    background: #414042;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 8px;
+}
+.Partnership-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.Partnerships {
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    float: left;
+    margin: 10px 0px;
+}
+.P-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.P-Image {
+    width: 30%;
+    height: auto;
+    background: #58595B;
+    float: left;
+    border: 1px white solid;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.P-Text {
+    width: 70%;
+    height: auto;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+    .P-Text a{
+        color: #f69240;
+    }
+.Contact {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    border-top: 1px white solid;
+}
+.C-Text {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.Social {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    border-top: 1px white solid;
+}
+.SI-Container {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 30px;
+    float: left;
+}
+.Social-Icon {
+    width: 60px;
+    height: 60px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 0px white solid;
+    margin: 0 auto;
+    color: #ffffff;
+}
+/* For Chrome 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .Social-Icon {
+    width: 100px;
+    height: 100px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 1px white solid;
+    float: left;
+    color: #ffffff;
+    margin-left: 12vw;
+    margin-top: 30px; 
+}
+    */
+
+.Important {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-top: 30px;
+    border-top: 1px white solid;
+}
+    .small {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    .info {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+/* End of Footer Styling */
+}
+@media only screen
+and (min-width:600px) {
+    Body {
+        margin: 0;
+        padding: 0;
+    } 
+    .Container {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+    }  
+    Header {
+        width: 100%;
+        height: 80px;
+        background: rgba(0,0,0,0.5);
+        border-bottom: 2px white solid;
+        position: fixed;
+        z-index: +999;
+    }
+    #Logo_Icon {
+        width: 25%;
+        height: 100%;
+        background: #414042;
+        float: left;
+    }
+    #Logo_Icon img {
+        width: 100%;
+        height: 100%;
+    }
+    #Menu_Icon {
+        width: 25%;
+        height: 100%;
+        background: rgba(255,255,255,1);
+        float: right;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        position: relative;
+        cursor: pointer;
+        transition: all linear 300ms;
+    }
+    .MenuAbout {
+        width: 40%;
+        margin: 0 auto;
+        position: relative;
+    }
+     
+        
+        /* The sub class for the menu line begins here 
+        .Menu-Line {
+            width: 100%;
+            height: 2px;
+            background: #000000;
+            margin-top: 15px;
+            transition: all linear 300ms;
+        }
+        .Menu-Line:first-child{
+            margin-top: 10%;
+        } */
+        .ML1 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 10px;
+            transition: all ease 400ms;
+        }
+        .ML2 {
+            height: .10em;
+            width: 100%;
+            background: black;
+           margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .ML3 {
+            height: .10em;
+            width: 100%;
+            background: black;
+            margin: 0 auto;
+            margin-top: 15px;
+            transition: all ease 400ms;
+        }
+        .MLOne{
+            -webkit-transform-origin: top left;
+            -moz-transform-origin: top left;
+            -ms-transform-origin: top left;
+            -o-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 70px;
+            margin: 0 auto;
+            height: .10em;
+            margin-left: 10%;
+            margin-top: 8%;
+        }
+        .MLTwo {
+            display: none;
+        }
+        .MLThree{
+            -webkit-transform-origin: bottom left;
+            -moz-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+            transform: rotate(-45Deg);
+            -webkit-transform: rotate(-45Deg);
+            -moz-transform: rotate(-45Deg);
+            -ms-transform: rotate(-45Deg);
+            transform: rotate(-45Deg);
+            width: 70px;
+            transition: all ease 400ms;
+            margin: 0 auto;
+            margin-top:47px;
+            margin-left: 10%;
+            height: .10em;
+        }
+        /* End of that styling */
+.Phone_Nav_Bar {
+    width: 75%;
+    height: auto;
+    overflow: auto;
+    background: #F69240;
+    position: absolute;
+    border-left: 5px #4c4c4c solid;
+    right: -90%;
+    top: 82px;
+    transition: all linear 300ms;
+}
+.Toggled-Phone-Nav {
+    right: 0%;
+    z-index: +999;
+}
+.Phone_Nav_Bar ul {
+    padding: 0;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 5px white solid;
+    cursor: pointer;
+}
+.Phone_Nav_Bar ul li:hover {
+    background: #4c4c4c;
+}
+.Phone_Nav_Bar ul a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: sans-serif; 
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+.Sub-Nav-Text {
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    color: #4c4c4c;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: .7;
+    transition: all linear 400ms;
+}
+.Phone_Nav_Bar ul li:hover .Sub-Nav-Text {
+    opacity: 1;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px; margin-left: -10px;
+}
+/* Content Container + Children Element Styling Here */
+.Desktop_Nav_Bar {
+        display: none;
+    }
+.Content-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.Hero-Element {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background:#414042;
+    background-size: cover;
+    background-position: 0px;
+    float: left;
+    margin-bottom: 8px;
+    transition: all linear 300ms;
+}
+    .Accordion-Container {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .myAccordion {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        float: left;
+        background: #FCFAFA;
+        font-family: "ZonaPro-Light";
+        transition: all linear 500ms;
+        box-sizing: border-box;
+        padding-left: 10px;
+        text-align: left;
+        margin: 0;
+        margin-top: 10px;
+        cursor: pointer;
+        border-left: 10px #4c4c4c solid;
+    }
+    .myAccordion:hover {
+        background: #FCFAFA /* #4c4c4c */;
+        color: #4c4c4c;
+    }
+    .myAccordion h3 {
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+    .Arrow {
+        width: 25%;
+        height: auto;
+        overflow: auto;
+        font-size: 28px;
+        float: left;
+        padding-left: 10px;
+        box-sizing: border-box;
+        padding: 20px;
+        color:black;
+        cursor: pointer;
+    }
+    .Arrow:first-child{
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+        text-align: right;
+        padding-right: 10px;
+    }
+    .Arrow:last-child{
+        float: right;
+        text-align: right;
+        padding-right: 10px;
+        padding-left: 0;
+    }
+    .Menu {
+        float: left;
+        height: auto;
+        overflow: auto;
+        display: none;
+        width: 100%;
+    }
+    .MenuImage {
+        float: left;
+        width: 100%;
+        height: 180px;
+        background-image: ;
+        background-size: cover;
+    }
+    .LeftMenu {
+        float: left;
+        width: 100%;
+        background: rgba(255,255,255,1);
+        font-family: "ZonaPro-Light";
+        font-weight: 300;
+        box-sizing: border-box;
+        border-right: 10px #F69240 solid;
+        border-bottom: 10px #F69240 solid;
+        border-top: 10px #000 solid;
+        font-size: 22px;
+        text-align: center;
+    }
+    .LeftMenu ul , .RightMenu ul {
+        padding: 10px 20px;
+    }
+    .LeftMenu ul li, .RightMenu ul li {
+        list-style: none;
+        margin-top: 10px;
+    }
+    .LeftMenu ul h3, .RightMenu ul h3 {
+        border-bottom: 1px black solid;
+        padding-bottom: 10px;
+    }
+    .RightMenu {
+        float: left;
+        width: 100%;
+        background: rgba(255,255,255,1);
+        font-family: "ZonaPro-Light";
+        background-image: url(images/icons/Menu_pattern.png);
+        background-repeat: repeat-y;
+        font-family: sans-serif;
+        font-weight: 300;
+        text-align: center;
+        min-height: 650px;
+        height:auto;
+        box-sizing: border-box;
+        border-right: 10px #F69240 solid;
+        border-left: 10px #F69240 solid;
+        border-top: 10px #000 solid;
+        font-size: 22px;
+    }
+    .ActiveContent {
+        display: block;
+    }
+    
+    .LeftMenu img {
+        width: 100%;
+        opacity: .7;
+    }
+    .LeftMenu ul , .RightMenu ul {
+        padding: 10px 20px;
+    }
+    .LeftMenu ul li, .RightMenu ul li {
+        list-style: none;
+        margin-top: 0px;
+        padding: 15px 10px;
+        border-left: 1px solid #F69240;
+        font-size: 20px;
+    }
+    .LeftMenu ul h3, .RightMenu ul h3 {
+        border-bottom: 1px #F69240 solid;
+        padding-bottom: 10px;
+    }
+    
+    
+/* End of Content Container + Children Element Styling */
+
+/* Start of Footer Styling */
+Footer {
+    width: 100%;
+    height: auto;
+    background: #414042;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 8px;
+}
+.Partnership-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    padding-bottom: 20px;
+    
+}
+.Partnerships {
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    
+}
+.P-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.P-Image {
+    width: 150px;
+    height: 150px;
+    background: #58595B;
+    float: left;
+    border: 1px white solid;
+    box-sizing: border-box;
+}
+.P-Text {
+    width: 70%;
+    height: 100px;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+    .P-Text a{
+        color: #f69240;
+    }
+.Contact {
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    box-sizing: border-box;
+    float: left;
+    border-top: 1px white solid;
+}
+.C-Text {
+    width: 100%;
+    height: auto;;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.Social {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    float: left;
+    overflow: auto;
+    border-top: 1px white solid;
+    padding-bottom: 20px;
+    border-left: 1px white solid;
+}
+.SI-Container {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 50px 20%;
+    float: left;
+}
+.Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 0px white solid;
+    float: left;
+    color: #ffffff; 
+}
+/* For Chrome 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 1px white solid;
+    float: left;
+    color: #ffffff;
+    margin-left: 27%;
+    margin-top: 30px; 
+}
+}
+    */
+
+.Important {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-top: 30px;
+    border-top: 1px white solid;
+}
+    .small {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    .info {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 20px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+/* End of Footer Styling */
+}
+@media only screen
+and (min-width:1100px) { 
+    Body {
+        margin: 0;
+        padding: 0;
+    } 
+    .Container {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+    }  
+    Header {
+        width: 100%;
+        height: 50px;
+        background: rgba(0,0,0,0.5);
+        border-bottom: 1px white solid;
+        position: fixed;
+        max-width: 1500px;
+        z-index: +999;
+    }
+    ActivePage {
+        background: rgba(255,255,255,0.7);
+        color: black;
+    }
+    #Logo_Icon {
+        width: 10%;
+        height: 100%;
+        background: rgba(0,0,0,0.1);
+        float: left;
+    }
+    #Logo_Icon img {
+        width: 100%;
+        height: 100%;
+    }
+    #Menu_Icon {
+        width: 25%;
+        height: 100%;
+        background: #E6E7E8;
+        float: right;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        position: relative;
+        cursor: pointer;
+        transition: all linear 300ms;
+        display: none;
+    }
+    #Menu_Icon:Hover {
+        background: rgba(0,0,0,0.4);
+    }
+        
+.Phone_Nav_Bar {
+    width: 75%;
+    height: 100px;
+    background: #000;
+    position: relative;
+    float: left;
+    display: none;
+    border-left: 5px #4c4c4c solid;
+    transition: all linear 300ms;
+}
+.Toggled-Phone-Nav {
+    right: 0%;
+    z-index: +999;
+}
+.Phone_Nav_Bar ul {
+    padding: 0;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 5px white solid;
+    cursor: pointer;
+}
+.Phone_Nav_Bar ul li:hover {
+    background: #4c4c4c;
+}
+.Phone_Nav_Bar ul li a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: sans-serif; 
+    color: #4c4c4c;
+    font-size: 22px;
+    margin: 0;
+}
+.Phone_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+.Sub-Nav-Text {
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    color: #4c4c4c;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: .7;
+    display: none;
+    transition: all linear 400ms;
+}
+.Phone_Nav_Bar ul li:hover .Sub-Nav-Text {
+    opacity: 1;
+    color: rgba(255,255,255,0.9);
+    font-size: 18px; margin-left: -10px;
+}
+.Desktop_Nav_Bar {
+    width: 50%;
+    height: 100%;
+    background:;
+    position: relative;
+    float: right;
+    display: block;
+}
+.Desktop_Nav_Bar ul {
+    height: auto;
+    overflow: auto;
+    padding: 0;
+    margin-top: 0px;
+}
+.Desktop_Nav_Bar ul li {
+    list-style: none;
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    padding: 12px 10px;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all linear 200ms;
+}
+.Desktop_Nav_Bar ul li:hover {
+    background: rgba(76, 76, 76,0.8);
+}
+
+.Desktop_Nav_Bar ul a {
+    font-size: 22px;
+    text-decoration: none;
+    font-family: ZonaPro-Light;  
+    color: #E5E5E5;
+    font-size: 22px;
+    margin: 0;
+}
+#ActivePage {
+        background: rgba(255,255,255,0.0);
+        color: #FDCF93;
+    }
+    #ActiveA {
+        color: #FDCF93;
+    }
+.Desktop_Nav_Bar ul li:hover a {
+    color: #ffffff;
+}
+/* Content Container + Children Element Styling Here */
+
+.Content-Container {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.Hero-Element {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background:#fff;
+    background-size: cover;
+    background-position: 0px;
+    float: left;
+    margin-bottom: 8px;
+    margin-top: 80px;
+    transition: all linear 300ms;
+}
+
+    .Accordion-Container {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: auto;
+        padding:0;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    .myAccordion {
+        width: 11.02%;
+        height: auto;
+        float: left;
+        background: #FFF;
+        font-family: "ZonaPro-Light";
+        transition: all linear 300ms;
+        box-sizing: border-box;
+        padding: 5px 5px;
+        text-align: center;
+        font-size: 70%;
+        margin: 0;
+        margin-top: 10px;
+        cursor: pointer;
+        border-left: 4px #fff solid;
+        display: none;
+    }
+    .MA-Desktop {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+    .DMA {
+        width: 11.02%;
+        height: auto;
+        float: left;
+        background: #FFF;
+        font-family: "ZonaPro-Light";
+        transition: all linear 300ms;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 100%;
+        margin: 0;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #3A3A3C;
+        border-left: 4px #fff solid;
+        display: block;
+    }
+    .MA-Desktop .myAccordion:hover {
+        background: #F69240;
+        color: white;
+    }
+    
+    .myAccordion h3 {
+        width: 50%;
+        float: left;
+    }
+    .Arrow {
+        width: 25%;
+        height: auto;
+        overflow: auto;
+        font-size: 28px;
+        float: left;
+        padding-left: 10px;
+        box-sizing: border-box;
+        padding: 20px;
+        color:black;
+        cursor: pointer;
+    }
+    .Arrow:first-child{
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+        text-align: right;
+        padding-right: 10px;
+    }
+    .Arrow:last-child{
+        float: right;
+        text-align: right;
+        padding-right: 10px;
+        padding-left: 0;
+    }
+    .Menu {
+        float: left;
+        height: auto;
+        overflow: auto;
+        display: none;
+        width: 100%;
+    }
+    .MenuImage {
+        float: left;
+        width: 100%;
+        height: 200px;
+        background-image: url(images/Breakfast.png);
+        background-position: 0px -200px;
+        background-size: cover;
+        transition: all ease 500ms;
+    }
+    .LeftMenu {
+        float: left;
+        width: 30%;
+        min-height: 650px;
+        height:auto;
+        background: #Fff;
+        font-family:sans-serif;
+        font-weight: 300;
+        box-sizing: border-box;
+        border-right: 10px #F69240 solid;
+        border-bottom: 10px #F69240 solid;
+        border-top: 10px #000 solid;
+        font-size: 22px;
+        /* box-shadow: 0px 10px 50px 30px #F69240; */
+    }
+    .LeftMenu img {
+        width: 100%;
+        opacity: .7;
+    }
+    .LeftMenu ul , .RightMenu ul {
+        padding: 10px 20px;
+    }
+    .LeftMenu ul li, .RightMenu ul li {
+        list-style: none;
+        margin-top: 0px;
+        padding: 15px 10px;
+        border-left: 1px solid #F69240;
+        font-size: 20px;
+    }
+    .LeftMenu ul h3, .RightMenu ul h3 {
+        border-bottom: 1px #F69240 solid;
+        padding-bottom: 10px;
+    }
+    .RightMenu {
+        float: left;
+        width: 70%;
+        background-image: url(images/icons/Menu_pattern.png);
+        background-repeat: repeat-y;
+        font-family: sans-serif;
+        font-weight: 300;
+        text-align: center;
+        min-height: 650px;
+        height:auto;
+        box-sizing: border-box;
+        border-right: 10px #F69240 solid;
+        border-left: 10px #F69240 solid;
+        border-top: 10px #000 solid;
+        font-size: 22px;
+        
+    }
+    .ActiveContent {
+        display: block;
+    }
+    .ActiveTab {
+        background:#4c4c4c;
+        color: white;
+    }
+/* End of Content Container + Children Element Styling */
+
+/* Start of Footer Styling */
+Footer {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background: #414042;
+    box-sizing: border-box;
+    border-top: 5px white solid;
+    padding: 15px;
+    margin-top: 8px;
+}
+.Partnership-Container {
+    width: 38%;
+    height: auto;
+    overflow: auto;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-left: 1px white solid;
+    float: right;
+    
+}
+.Partnerships {
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+.P-Title {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.P-Image {
+    width: 100px;
+    height: 100px;
+    background: #58595B;
+    float: left;
+    border: 1px white solid;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.P-Text {
+    width: 70%;
+    height: auto;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+    .P-Text a{
+        color: #F69240;
+    }
+.Contact {
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    box-sizing: border-box;
+    float: left;
+    border-top: none;
+}
+.C-Text {
+    width: 100%;
+    height: auto;;
+    background:;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px 10px;
+    color: #ffffff;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.Social {
+    width: 30%;
+    height: auto;
+    box-sizing: border-box;
+    float: left;
+    overflow: auto;
+    border-top: none;
+    padding-bottom: 20px;
+    border-left: 1px white solid;
+}
+.SI-Container {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px 20%;
+    float: left;
+}
+.Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 0px white solid;
+    float: left;
+    color: #ffffff; 
+}
+/* For Chrome 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .Social-Icon {
+    width: 50px;
+    height: 50px;
+    background:#58595B;
+    box-sizing: border-box;
+    border: 1px white solid;
+    float: left;
+    color: #ffffff;
+    margin-left: 27%;
+    margin-top: 30px; 
+}
+}
+    */
+
+.Important {
+    width: 60%;
+    height: auto;
+    overflow: auto;
+    margin-top: 30px;
+    border-top: 1px white solid;
+}
+        .small {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 120px; 
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    .info {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 60px; 
+        font-family: ZonaPro-Light;
+        font-size: 18px;
+        font-weight: 100;
+    }
+/* End of Footer Styling */
+}

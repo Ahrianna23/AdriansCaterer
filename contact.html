@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Adrian's Caterers</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> <!-- Needed for JQuery -->
+    <!-- This is for ADOBE TYPEKIT FONTS -->
+    
+    <!-- Local JQuery Files REMOVE BEFORE UPLOADING FILE -->
+    <script src="JQuery-1.11.3.js"></script>
+    <script src="jquery.js"></script>
+    <script src="https://use.typekit.net/bvy3pot.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!-- FOR SEO -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <meta name="copyright" content="2016">
+    <link rel="shortcut icon" href="images/AdriansCaterers_favicon.ico">
+</head>
+<script>
+    alert(getTitle);
+    function openMenu(evt, menuName) {
+        var getwidth = window.innerWidth;   
+        if(getwidth < 1100) {
+        return;
+    }
+      else {  
+    
+            var getActive = document.getElementsByClassName('tabcontentActive');
+
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 1; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("myAccordion");
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" tabcontentActive", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.className += " Active";
+      }
+    
+}
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('#Menu_Icon').click(function() {
+          $('.Phone_Nav_Bar').toggleClass('Toggled-Phone-Nav');
+           $('.ML1').toggleClass('MLOne');
+           $('.ML2').toggleClass('MLTwo');
+           $('.ML3').toggleClass('MLThree');
+       });
+        if($('.Container').css("display", "none")){
+          $('.Container').fadeIn(1000);  
+          $('.Container').css("display", "block")
+        };
+        $('a').click(function() {
+            $('.Container').fadeOut(500);
+            var href = $(this).attr('href');
+            setTimeout(function() {window.location = href}, 500);
+            return false;
+        });
+        
+    });
+</script>
+<body onunload="">
+    <div class="Container"> <!-- Start of Main Container  -->
+        <header class="Phone_Nav"><!-- Start of Cell Phone Navigation  -->
+            <div id="Logo_Icon" itemscope itemtype="http://http://www.adrianscaterers.net">
+                <a itemprop="url" href="index.html" title="Adrian's Caterering">
+                    <img src="images/Logo.svg" title="Adrian's Caterers Logo" alt="Adrian's Caterering, Plainfield, New Jersey, Caribbean Restaurant">
+                </a>
+            </div>
+            <div id="Menu_Icon">
+                <!-- <img src=""> In case of Image Icon-->
+                <div class="Menu">
+                    <div class="Menu-Line ML1"></div>
+                <div class="Menu-Line ML2"></div>
+                <div class="Menu-Line ML3"></div>
+                </div>
+            </div>
+            <nav class="Phone_Nav_Bar">
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About<div class="Sub-Nav-Text">&mdash; Our Story</div></li></a>
+                    <a href="menu.html"><li>Menu<div class="Sub-Nav-Text">&mdash; The food</div></li></a>
+                    <a href="services.html"><li>Services<div class="Sub-Nav-Text">&mdash; What we offer</div></li></a>
+                    <a href="contact.html"><li>Contact<div class="Sub-Nav-Text">&mdash; Get in Touch</div></li></a>
+                </ul>
+            </nav>
+            <nav class="Desktop_Nav_Bar">
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About<div class="Sub-Nav-Text">&mdash; Our Story</div></li></a>
+                    <a href="menu.html"><li>Menu<div class="Sub-Nav-Text">&mdash; The food</div></li></a>
+                    <a href="services.html"><li>Services<div class="Sub-Nav-Text">&mdash; What we offer</div></li></a>
+                    <a href="contact.html" id="ActiveA"><li class="ActivePage">Contact<div class="Sub-Nav-Text">&mdash; Get in Touch</div></li></a>
+                </ul>
+            </nav>
+        </header> <!-- End of Cell Phone Navigation  -->
+        <div class="Content-Container"> <!-- Start of Content Container  -->
+            <div class="Hero-Element">
+                <div class="Form-Container">
+                    <form action="contactform.php" method="POST">
+                    <table>
+                        <tr>
+                            <td><label id="Name-Label">Name</label></td>
+                            <td><input id="Name-Input" name="Name" placeholder="Enter your name..." required></td>
+                        </tr>
+                        <tr>
+                            <td><label id="Email-Label">Email</label></td>
+                            <td><input id="Email-Input" name="Email" placeholder="Enter your email..." required></td>
+                        </tr>
+                        <tr>
+                            <td><label id="Message-Label">Message</label></td>
+                            <td><textarea id="Message-Input" name="Message" placeholder="Enter your message..." required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><input type="Submit" value="Submit" id="Submit-Input"></td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <div class="Contact-Info">
+                    <div class="CI-Card" style="border:none;">
+                        <div class="icons"><img src="images/icons/location.svg"></div><div class="CI-Text">1100-08 East 2nd St, Plainfield, NJ</div></div>
+                    <div class="CI-Card">Phone: 908.372.4922</div>
+                    <div class="CI-Card" style="border:none;">
+                        <div class="icons"><img src="images/icons/email.svg"></div>
+                        <div class="CI-Text">Adrianscaterers@gmail.com</div>
+                    </div>
+                    <div class="CI-Card">Social Media</div>
+                </div>
+                
+            </div>
+        </div> <!-- End of Content Container  -->
+        <footer>
+            <div class="Partnership-Container">
+                <p class="P-Title">Partnerships</p>
+                <div class="Partnerships">
+                    <div class="P-Image">
+                        <img src="images/vfw%20logo.jpg" width="100%">
+                    </div>
+                    
+                    <div class="P-Text">VFW Post 3117 <br> Adrian's Caterers are proud partners with Veterans of Foreign Wars. Serving those who served our us in a way we could never pay back. <a href="http://www.njvfw.org/index.php/122-districts/district-8/693-vfw-post-3117">Learn more</a> on their website.</div>
+                </div>
+                
+                <div class="Partnerships">
+                    <div class="P-Image"> 
+                        <img src="images/Fountain%20Baptist%20Church%20logo.png" width="100%">
+                    </div>
+                    
+                    <div class="P-Text"> Fountain Baptist Church <br> We've partnered with a number of local churches. FBC is one of main partners, find out more by clicking <a href="http://fountainbaptist.org/">here</a></div>
+                </div>
+                
+                <div class="Partnerships">
+                    <div class="P-Image"> 
+                        <img src="images/City%20of%20Plainfield%20logo.png" width="100%">
+                    </div>
+                    
+                    <div class="P-Text"> City of Plainfield:<br> Adrian's Caterers has worked with the city of Plainfield numerous times and are a proud partner with this great city. <a href="http://www.plainfieldnj.gov/
+">View</a> their website </div>
+                </div>
+            </div>
+            <div class="Contact">
+                <p class="P-Title">Contact</p>
+                <p class="C-Text">
+                    <strong>T:</strong> 908.372.4922<br><br>
+                    <strong>Email:</strong> Adrianscaterers@gmail.com<br><br>
+                    1100-08 East 2nd St, Plainfield, NJ 07062<br>
+                </p>
+            </div>
+            <div class="Social">
+                <p class="P-Title">Social Media</p>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <a href="https://www.facebook.com/AdriansCaterers" target="_blank"><img src="images/icons/facebook_icon.png" width="100%"></a>
+                    </div>
+                </div>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <a href="https://www.instagram.com/adrianscaterers/" target="_blank"><img src="images/icons/insta_icon.png" width="100%"></a>
+                    </div>
+                </div>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <a href="https://www.linkedin.com/in/AdriansCaterers" target="_blank"><img src="images/icons/linkedin_icon.png" width="100%"></a>
+                    </div>
+                </div>
+                <div class="SI-Container">
+                    <div class="Social-Icon">
+                        <img src="images/icons/google_icon.png" width="100%" title="Coming Soon!">
+                    </div>
+                </div>
+            </div>
+            <div class="Important">
+                <p class="P-Title">Important Information</p>
+                <div class="info">
+                    <i>Information coming soon</i>
+                </div>
+                <div class="small">&copy; Copyright 2016</div>
+            </div>
+        </footer>
+    </div> <!-- End of Main Container  -->
+</body>
+</html>
